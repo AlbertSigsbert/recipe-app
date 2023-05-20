@@ -1,21 +1,18 @@
-<div class="border border-gray-200 rounded-lg shadow">
-  <!-- <a href="#">
+<div class="justify-self-end mt-28 border border-gray-200  w-fit rounded-lg shadow">
     <img
-      class="rounded-t-lg c"
-      src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505"
-      alt=""
+      class="rounded-t-lg max-w-[250px]"
+      [src]="chosenRecipe.imagePath"
+      alt={{chosenRecipe.name}}
+
     />
-  </a> -->
   <div class="p-5">
     <a href="#">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-        Recipe Name
+        {{ chosenRecipe.name}}
       </h5>
     </a>
     <p class="mb-3 font-normal text-gray-700">
-      Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolor,
-      ullam ipsam quod cupiditate sequi? Repellat, molestiae esse! Voluptatem,
-      amet?
+      {{ chosenRecipe.description }}
     </p>
     <p class="mb-3 font-normal text-gray-700">
      Ingredients
