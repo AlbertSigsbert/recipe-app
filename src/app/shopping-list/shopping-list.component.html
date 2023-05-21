@@ -1,6 +1,6 @@
 <div>
   <h1 class="text-2xl font-bold my-4">Shopping List</h1>
-  <app-shopping-edit></app-shopping-edit>
+  <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
   <hr class="h-px my-8 bg-gray-200 border-0 w-1/2" />
   <ul class="list-disc list-inside space-y-1 text-gray-500">
     <a class="cursor-pointer" *ngFor="let ingredient of ingredients">
