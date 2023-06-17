@@ -1,18 +1,18 @@
 <div class="mt-20 border border-gray-200 w-fit rounded-lg shadow">
     <img
       class="rounded-t-lg mt-4 max-w-[250px] mx-auto"
-      [src]="chosenRecipe.imagePath"
-      alt={{chosenRecipe.name}}
+      [src]="recipe.imagePath"
+      alt={{recipe.name}}
 
     />
   <div class="p-5 text-center">
     <a href="#">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-        {{ chosenRecipe.name}}
+        {{ recipe.name}}
       </h5>
     </a>
     <p class="mb-3 font-normal text-gray-700">
-      {{ chosenRecipe.description }}
+      {{ recipe.description }}
     </p>
    
        <!-- Dropdown -->
@@ -38,17 +38,17 @@
            <a (click)="onAddToShoppingList()" class="block cursor-pointer px-4 py-2 hover:bg-gray-100">To Shopping List</a>
          </li>
          <li>
-           <a href="#" class="block cursor-pointer px-4 py-2 hover:bg-gray-100">Edit Recipe</a>
+           <a (click)="onEditRecipe()" class="block cursor-pointer px-4 py-2 hover:bg-gray-100">Edit Recipe</a>
          </li>
          <li>
-           <a href="#" class="block cursor-pointer px-4 py-2 hover:bg-gray-100">Delete Recipe</a>
+           <a class="block cursor-pointer px-4 py-2 hover:bg-gray-100">Delete Recipe</a>
          </li>
        </ul>
      </div>
 
      
       <ul class="flex flex-col items-center justify-center my-4 list-disc list-inside space-y-1 text-gray-500">
-        <a class="cursor-pointer" *ngFor="let ingredient of chosenRecipe.ingredients">
+        <a class="cursor-pointer" *ngFor="let ingredient of recipe.ingredients">
           <div class="flex justify-between p-4 my-2 bg-white border border-gray-200 rounded-lg shadow">
             {{ ingredient.name }} ({{ ingredient.amount }})
           </div>

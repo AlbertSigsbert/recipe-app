@@ -1,6 +1,7 @@
 <a
-  class="flex flex-col justify-between p-4 my-4 bg-white border border-gray-200 rounded-lg shadow"
-  (click)="onSelected()"
+  class="flex flex-col justify-between p-4 my-4 border border-gray-200 rounded-lg shadow cursor-pointer"
+   routerLinkActive="bg-gray-100"
+  [routerLink]="[index]"
 >
   <div>
     <img class="rounded-lg w-16" [src]="recipe.imagePath" [alt]="recipe.name" />

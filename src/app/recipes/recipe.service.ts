@@ -20,6 +20,7 @@ export class RecipeService {
       ]
     ),
     new Recipe(
+  
       'Dum Aloo',
       'Dum Aloo is a North Indian curried dish where baby potatoes are steam cooked in a delicious gravy',
       'https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Dum-Aloo-e163632.jpg?quality=90&webp=true&resize=375,341',
@@ -38,6 +39,10 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+   getRecipe(index:number) {
+     return this.recipes[index];
+  }
+  
   addRecipeToShoppingList(ingredients:Ingredient []){
     this.slService.addIngredients(ingredients);
   }
