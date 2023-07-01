@@ -4,9 +4,7 @@
   <hr class="h-px my-8 bg-gray-200 border-0 w-1/2" />
   <ul class="list-disc list-inside space-y-1 text-gray-500">
     <a class="cursor-pointer" *ngFor="let ingredient of ingredients let i = index" (click)="onEditItem(i)">
-      <div
-        class="flex justify-between p-4 my-2 w-1/2 bg-white border border-gray-200 rounded-lg shado"
-      >
+      <div class="flex justify-between p-4 my-2 w-1/2 bg-white border border-gray-200 rounded-lg shadow">
         {{ ingredient.name }} ({{ ingredient.amount }})
       </div>
     </a>
